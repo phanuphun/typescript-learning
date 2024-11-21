@@ -20,16 +20,16 @@ const user: User[] = [
     { id: 3, name: "Sawad", active: true },
 ];
 
-console.log(pickObj<User>(user, ['name' ,'id']));
+console.log(pickObj<User>(user, ["name", "id"]));
 
 interface Movie {
-    title:string,
-    star:string[]
-    creator:string
-    updateAt:Date
+    title: string;
+    star: string[];
+    creator: string;
+    updateAt: Date;
 }
 
-const movies : Movie[] = [
+const movies: Movie[] = [
     {
         title: "The Shadow's Legacy",
         star: ["Evelyn Grace", "Mark Hudson", "Sophia Reed"],
@@ -41,9 +41,9 @@ const movies : Movie[] = [
         star: ["Olivia Hart", "Ethan Blake", "Chloe Winters"],
         creator: "Isabella Harper",
         updateAt: new Date("2023-12-01"),
-    }
-]
+    },
+];
 
-console.log(pickObj<Movie>(movies,['title','updateAt']))
+console.log(pickObj<Movie>(movies, ["title", "updateAt"]));
 
 export default "---- Section 8 Keyof ----";

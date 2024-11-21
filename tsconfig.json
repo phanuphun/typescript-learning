@@ -7,11 +7,12 @@
         "target": "es6",
         "skipDefaultLibCheck": false,
         "esModuleInterop": true , // แก้ปัญหาการ import , export ระหว่าง es6 กับ commonjs
-        "strict": true
+        "strict": true ,
+        "typeRoots": ["./node_modules/@types", "./types"] // ระบุให้ typescript โหลด declaration file ที่ไหน
     },
     // "files" : [ // ระบุไฟล์เฉพาะที่ต้องการคอมไพล์
     //     "src/index.ts"
     // ],
-    "include": ["src/**/*.ts"], // compile ทุกไฟล์ที่อยู่ใน src ถ้าเอาออก build ทุกไฟล์
+    "include": ["src/**/*.ts","./types/**/*"], // compile ทุกไฟล์ที่อยู่ใน src ถ้าเอาออก build ทุกไฟล์
     "exclude": ["node_modules" , "dist"] , // ระบุไฟล์หรือโฟลเดอร์ที่ไม่ต้องการให้ TypeScript คอมไพล์
 }

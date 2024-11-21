@@ -1,6 +1,7 @@
 type BirthDateData = Date | string;
 
 class Person {
+    // เวลาใช้งานไม่จำเป็นต้องสร้าง instant
     static version: string = "1.5.25";
 
     // property (variable)
@@ -9,6 +10,7 @@ class Person {
     lastName: string = "";
     private readonly bithDate?: BirthDateData;
 
+    // constructor
     constructor(Fname: string, Lname: string, bDate?: BirthDateData) {
         this.firstName = Fname;
         this.lastName = Lname;
@@ -45,14 +47,17 @@ class Person {
     }
 }
 
+// inheritance
 class Teacher extends Person {
     schools: string[] = [];
 }
+
 
 class Student extends Person {
     grade:number = 0
     schools: string[] = [];
 
+    // method overriding
     getDetail(): string {
         return `${this.firstName} ${this.lastName} ,(GRADE = ${this.grade})`;
     }
